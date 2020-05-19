@@ -1,0 +1,23 @@
+{% if current_user.theme2 == 'default' %}
+
+{% extends 'base.html' %}
+
+{% elif current_user.theme2 == 'black' %}
+
+{% extends 'baseblack.html' %}
+
+{% elif current_user.theme2 == 'red' %}
+
+{% extends 'basered.html' %}
+
+{% else %}
+
+{% extends 'base.html' %}
+
+{% endif %}
+
+
+{% block app_content %}
+<h1>{{_('There is no such an adress in our neighbourhood brother!')}}</h1>
+<a href="{{url_for('main.index')}}">{{_('BACK')}}</a>
+{% endblock %}

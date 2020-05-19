@@ -1,0 +1,31 @@
+{% if user.theme2 == 'default' %}
+
+{% extends 'base.html' %}
+
+{% elif user.theme2 == 'black' %}
+
+{% extends 'baseblack.html' %}
+
+{% elif user.theme2 == 'red' %}
+
+{% extends 'basered.html' %}
+
+{% else %}
+
+{% extends 'base.html' %}
+
+{% endif %}
+
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>{{_('Sign in Bolvan')}}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <p>{{_('New in da hood?')}} <a href="{{ url_for('auth.register') }}">{{_('Join da gang brother')}}</a></p>
+    <p>{{_('Forgot password')}}  <a href="{{ url_for('auth.reset_password_request') }}">{{_('cliock here')}}</a></p>
+
+{% endblock %}

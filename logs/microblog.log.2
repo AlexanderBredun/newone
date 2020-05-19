@@ -1,0 +1,137 @@
+2020-05-18 18:41:05,952 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 18:46:23,074 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 18:47:06,551 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 18:47:33,689 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 18:49:13,597 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 18:55:07,599 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 18:55:38,455 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 18:56:03,207 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 18:56:45,794 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 18:56:48,416 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 213, in search
+    posts, total = query_index('newone1', g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "D:\code\microblog\app\search.py", line 21, in query_index
+    search = current_app.elasticsearch.search(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1622, in search
+    return self.transport.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 355, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 252, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 281, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [newone1]', newone1, index_or_alias)
+2020-05-18 18:56:49,720 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 213, in search
+    posts, total = query_index('newone1', g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "D:\code\microblog\app\search.py", line 21, in query_index
+    search = current_app.elasticsearch.search(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1622, in search
+    return self.transport.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 355, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 252, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 281, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [newone1]', newone1, index_or_alias)
+2020-05-18 18:59:31,749 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 18:59:33,717 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 202, in search
+    current_app.elasticsearch.indices.create(index='newone1', id = Post.id, body = Post)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+TypeError: create() got an unexpected keyword argument 'id'
+2020-05-18 19:04:16,648 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:04:24,643 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\serializer.py", line 103, in dumps
+    return json.dumps(
+  File "D:\My Files\Python\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\My Files\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\My Files\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\serializer.py", line 89, in default
+    raise TypeError("Unable to serialize %r (type: %s)" % (data, type(data)))
+TypeError: Unable to serialize <class 'app.models.Post'> (type: <class 'flask_sqlalchemy.model.DefaultMeta'>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 202, in search
+    current_app.elasticsearch.indices.create(index='newone1', ignore = 400, body = Post)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\indices.py", line 102, in create
+    return self.transport.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 321, in perform_request
+    body = self.serializer.dumps(body)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\serializer.py", line 107, in dumps
+    raise SerializationError(data, e)
+elasticsearch.exceptions.SerializationError: (<class 'app.models.Post'>, TypeError("Unable to serialize <class 'app.models.Post'> (type: <class 'flask_sqlalchemy.model.DefaultMeta'>)"))
+2020-05-18 19:05:44,967 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]

@@ -1,0 +1,24 @@
+{% if current_user.theme2 == 'default' %}
+
+{% extends 'base.html' %}
+
+{% elif current_user.theme2 == 'black' %}
+
+{% extends 'baseblack.html' %}
+
+{% elif current_user.theme2 == 'red' %}
+
+{% extends 'basered.html' %}
+
+{% else %}
+
+{% extends 'base.html' %}
+
+{% endif %}
+
+
+{% block app_content %}
+<h1>{{_('Fuck, fuck, fuck, fuck, fuck, fuck!!')}}</h1>
+<p>{{_('Some real shit happend i am calling boss now,SHIIIIIIIIIIIIIIIIIT!')}}</p>
+<a href="{{url_for('main.index')}}">{{_('BACK')}}</a>
+{% endblock %}

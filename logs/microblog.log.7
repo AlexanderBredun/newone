@@ -1,0 +1,135 @@
+2020-05-15 15:54:12,245 ERROR: Exception on /user/alal111 [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 102, in user
+    return render_template('user.html',
+  File "d:\code\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "d:\code\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "d:\code\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "d:\code\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "d:\code\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "D:\code\microblog\app\templates\user.html", line 22, in top-level template code
+    {% block app_content %}
+  File "D:\code\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "d:\code\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "d:\code\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "d:\code\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 22, in block "html"
+    {% block body -%}
+  File "d:\code\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 25, in block "body"
+    {% block content -%}
+  File "D:\code\microblog\app\templates\base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "D:\code\microblog\app\templates\user.html", line 29, in block "app_content"
+    <a href="{{ url_for('main.settings') }}">{{_('Settings')}}</a>   <a href="{{ url_for('edit_profile') }}">{{_('Edit profile')}}</a>
+  File "d:\code\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "d:\code\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2020-05-15 15:54:27,897 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-15 15:57:35,019 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-15 15:58:25,069 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-15 15:59:00,778 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-15 15:59:08,455 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-16 16:56:55,870 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-16 17:06:01,211 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-16 17:08:47,600 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:78]
+2020-05-18 14:38:23,221 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:30:06,458 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:31:23,564 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:32:10,032 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:33:28,212 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 195, in search
+    if not g.search_form.validate():
+  File "d:\code\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'search_form'
+2020-05-18 15:37:54,230 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:39:23,659 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:42:29,243 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:43:23,063 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:45:44,052 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:46:42,834 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:50:55,486 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 15:58:24,571 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 16:09:50,249 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 16:12:34,630 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 16:12:37,791 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 16:16:11,155 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 16:16:48,211 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]
+2020-05-18 16:16:50,066 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 201, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "D:\code\microblog\app\models.py", line 21, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "D:\code\microblog\app\search.py", line 21, in query_index
+    search = current_app.elasticsearch.search(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1622, in search
+    return self.transport.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 355, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 252, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 281, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-05-18 16:21:05,011 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:83]

@@ -1,0 +1,29 @@
+{% if current_user.theme2 == 'default' %}
+
+{% extends 'base.html' %}
+
+{% elif current_user.theme2 == 'black' %}
+
+{% extends 'baseblack.html' %}
+
+{% elif current_user.theme2 == 'red' %}
+
+{% extends 'basered.html' %}
+
+{% else %}
+
+{% extends 'base.html' %}
+
+{% endif %}
+
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+<h1>{{_('Profile Editor')}}</h1>
+<div class="row">
+    <div class="col-md-4">
+        {{ wtf.quick_form(form) }}
+    </div>
+</div>
+{% endblock %}

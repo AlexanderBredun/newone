@@ -1,0 +1,305 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-05-15 15:57+0300\n"
+"PO-Revision-Date: 2020-05-12 14:02+0300\n"
+"Last-Translator: \n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: app/__init__.py:19
+msgid ""
+"Yo u cunt from what neighbourhood u are? This is for homies only u "
+"fuck!!!!"
+msgstr "Эй хуйло ты с какого района? А ну сьебал нахуй черт!!!"
+
+#: app/translate.py:13 app/translate.py:40
+msgid "Error: the translation service is not configured."
+msgstr "Ошибка: служба перевода не настроена."
+
+#: app/auth/forms.py:10 app/auth/forms.py:16 app/main/forms.py:15
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: app/auth/forms.py:11 app/auth/forms.py:18 app/auth/forms.py:19
+msgid "Password"
+msgstr "Пароль"
+
+#: app/auth/forms.py:12
+msgid "Remember Me"
+msgstr "Запомнить меня"
+
+#: app/auth/forms.py:13
+msgid "Sign In"
+msgstr "Войти"
+
+#: app/auth/forms.py:17
+msgid "Email"
+msgstr "Email"
+
+#: app/auth/forms.py:20
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: app/auth/forms.py:25 app/main/forms.py:23
+msgid "Select differnet username dog"
+msgstr "Выбери другое имя собака"
+
+#: app/auth/forms.py:30
+msgid "Select differnet email dog"
+msgstr "Выбери другой email собака"
+
+#: app/auth/forms.py:34
+msgid "email"
+msgstr "email"
+
+#: app/auth/forms.py:35 app/auth/forms.py:41
+msgid "submit"
+msgstr "Подтвердить"
+
+#: app/auth/forms.py:39
+msgid "new password"
+msgstr "Новый пароль"
+
+#: app/auth/forms.py:40
+msgid "confirm password"
+msgstr "Подтверди пароль"
+
+#: app/auth/routes.py:24
+msgid "Invalid username"
+msgstr "Не правильный логин"
+
+#: app/auth/routes.py:27
+msgid "Invalid password"
+msgstr "Не правильный пароль"
+
+#: app/auth/routes.py:62
+msgid "Sup my new brother"
+msgstr "Здарова мой новый братан!"
+
+#: app/auth/routes.py:67
+msgid "Join the gang"
+msgstr "Присоединяся к банде !"
+
+#: app/auth/routes.py:85
+msgid "check imail"
+msgstr "Проверь почту"
+
+#: app/auth/routes.py:107
+msgid "succesfull"
+msgstr "Успешно!"
+
+#: app/main/forms.py:11
+msgid "default"
+msgstr "Стандартный"
+
+#: app/main/forms.py:11
+msgid "black"
+msgstr "Черный"
+
+#: app/main/forms.py:11
+msgid "red"
+msgstr "Красный"
+
+#: app/main/forms.py:16
+msgid "About me"
+msgstr "Про меня"
+
+#: app/main/forms.py:17 app/main/forms.py:27
+msgid "Submit"
+msgstr "Подтвердить"
+
+#: app/main/forms.py:26
+msgid "Say something"
+msgstr "Напишите что-нибудь"
+
+#: app/main/routes.py:40
+msgid "Ur post succsesfully published"
+msgstr "Пост опубликован!"
+
+#: app/main/routes.py:61
+msgid "yo title"
+msgstr "Йоу титул"
+
+#: app/main/routes.py:78
+msgid "Settings saved succesfully"
+msgstr "Настройки сохранены успешно"
+
+#: app/main/routes.py:103
+msgid "My home broski"
+msgstr "Мой дом братан"
+
+#: app/main/routes.py:119
+msgid "Changes saved succesfully!"
+msgstr "Изменения сохранены успешно"
+
+#: app/main/routes.py:131 app/main/routes.py:149
+#, python-format
+msgid "user %(username)s not found"
+msgstr "Поьзлватель %(username)s не найден"
+
+#: app/main/routes.py:135
+msgid "u cannot follow yourself"
+msgstr "Ты не можешь зафоловить себя даун"
+
+#: app/main/routes.py:139
+#, python-format
+msgid "u are following %(username)s now"
+msgstr "Ты подписан на %(username)s теперь"
+
+#: app/main/routes.py:153
+msgid "u cannot unfollow yourself"
+msgstr "Ты не можешь отписаться от себя дебил"
+
+#: app/main/routes.py:157
+#, python-format
+msgid "u are not following %(username)s now"
+msgstr "Ты больше не подписан на %(username)s  теперь"
+
+#: app/templates/_post.html:3
+msgid "barks"
+msgstr "тявкнул"
+
+#: app/templates/_post.html:8
+msgid "Translate"
+msgstr "Перевести"
+
+#: app/templates/base.html:21 app/templates/baseblack.html:35
+#: app/templates/basered.html:34
+msgid "Home"
+msgstr "Дом"
+
+#: app/templates/base.html:22 app/templates/baseblack.html:36
+#: app/templates/basered.html:35
+msgid "Explore"
+msgstr "Че там происходит"
+
+#: app/templates/base.html:26 app/templates/baseblack.html:40
+#: app/templates/basered.html:39
+msgid "Login"
+msgstr "Логин"
+
+#: app/templates/base.html:28 app/templates/baseblack.html:42
+#: app/templates/basered.html:41
+msgid "Profile"
+msgstr "Пройиль"
+
+#: app/templates/base.html:29 app/templates/baseblack.html:43
+#: app/templates/basered.html:42
+msgid "Logout"
+msgstr "Выйти"
+
+#: app/templates/base.html:67 app/templates/baseblack.html:81
+#: app/templates/basered.html:80
+msgid "Could not connect server"
+msgstr "Не удалось подключить сервер"
+
+#: app/templates/edit_profile.html:23
+msgid "Profile Editor"
+msgstr "Редактор профиля"
+
+#: app/templates/index.html:25
+#, python-format
+msgid "WaTS up my man, %(username)s!"
+msgstr "Че как братан %(username)s !"
+
+#: app/templates/index.html:47 app/templates/user.html:50
+msgid "Older"
+msgstr "Дальше"
+
+#: app/templates/index.html:50 app/templates/user.html:53
+msgid "Newer"
+msgstr "Назад"
+
+#: app/templates/settings.html:22
+msgid "Select Theme"
+msgstr "Выбрать тему"
+
+#: app/templates/user.html:24
+#, python-format
+msgid "Name: %(username)s"
+msgstr "Имя: %(username)s"
+
+#: app/templates/user.html:27
+msgid "followers"
+msgstr "подписчики"
+
+#: app/templates/user.html:27
+msgid "following"
+msgstr "подписки"
+
+#: app/templates/user.html:29
+msgid "Settings"
+msgstr "Настройки"
+
+#: app/templates/user.html:29
+msgid "Edit profile"
+msgstr "Изменить профиль"
+
+#: app/templates/user.html:31
+msgid "Follow"
+msgstr "Следовать"
+
+#: app/templates/user.html:33
+msgid "Unfollow"
+msgstr "Отписаться"
+
+#: app/templates/auth/login.html:22
+msgid "Sign in Bolvan"
+msgstr "Иди сюда ДУРАК"
+
+#: app/templates/auth/login.html:28
+msgid "New in da hood?"
+msgstr "тЫ ЧЕ НОВЕНЬКИЙ?"
+
+#: app/templates/auth/login.html:28
+msgid "Join da gang brother"
+msgstr "Ты с нами или против нас?"
+
+#: app/templates/auth/login.html:29
+msgid "Forgot password"
+msgstr "Забыл пароль"
+
+#: app/templates/auth/login.html:29
+msgid "cliock here"
+msgstr "Сюда кликни"
+
+#: app/templates/auth/register.html:23
+msgid ""
+"Register u cunt or i will find u and gonna smack u rigth into ur damn pig"
+" face"
+msgstr "Регенься а то я найду тебя и  разбеюу ебучку в кровь паскуда!"
+
+#: app/templates/auth/reset_password.html:7
+#: app/templates/auth/reset_password_request.html:9
+msgid "Reset Pass"
+msgstr "Сброс пароля"
+
+#: app/templates/errors/404.html:21
+msgid "There is no such an adress in our neighbourhood brother!"
+msgstr "На нашем районе нет такого адреса"
+
+#: app/templates/errors/404.html:22 app/templates/errors/500.html:23
+msgid "BACK"
+msgstr "Назад"
+
+#: app/templates/errors/500.html:21
+msgid "Fuck, fuck, fuck, fuck, fuck, fuck!!"
+msgstr "Бля, бля, бля, бля, бля, бля, бля!!!"
+
+#: app/templates/errors/500.html:22
+msgid "Some real shit happend i am calling boss now,SHIIIIIIIIIIIIIIIIIT!"
+msgstr "Какаето хуйня случилась я звоню старшему, сукааааааааааа!!!"
+

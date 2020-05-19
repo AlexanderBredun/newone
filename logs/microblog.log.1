@@ -1,0 +1,122 @@
+2020-05-18 19:05:46,796 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\serializer.py", line 103, in dumps
+    return json.dumps(
+  File "D:\My Files\Python\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\My Files\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\My Files\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\serializer.py", line 89, in default
+    raise TypeError("Unable to serialize %r (type: %s)" % (data, type(data)))
+TypeError: Unable to serialize <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x04C31DC0> (type: <class 'sqlalchemy.orm.attributes.InstrumentedAttribute'>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 202, in search
+    current_app.elasticsearch.indices.create(index='newone1', ignore = 400, body = Post.body)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\indices.py", line 102, in create
+    return self.transport.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 321, in perform_request
+    body = self.serializer.dumps(body)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\serializer.py", line 107, in dumps
+    raise SerializationError(data, e)
+elasticsearch.exceptions.SerializationError: (<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x04C31DC0>, TypeError("Unable to serialize <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x04C31DC0> (type: <class 'sqlalchemy.orm.attributes.InstrumentedAttribute'>)"))
+2020-05-18 19:07:13,763 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:07:22,299 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 202, in search
+    current_app.elasticsearch.indices.index(index='newone1', id = Post.id, body = Post.body)
+AttributeError: 'IndicesClient' object has no attribute 'index'
+2020-05-18 19:08:09,191 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:08:11,348 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 213, in search
+    posts, total = query_index('newone1', g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "D:\code\microblog\app\search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 92, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1622, in search
+    return self.transport.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 355, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 252, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "d:\code\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 281, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [newone1]', newone1, index_or_alias)
+2020-05-18 19:08:23,448 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:08:41,586 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:41:31,980 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:43:29,423 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:45:39,854 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:49:15,462 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:49:18,116 ERROR: Exception on /search [GET] [in d:\code\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\code\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\code\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "d:\code\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\code\microblog\app\main\routes.py", line 206, in search
+    orint(total)
+NameError: name 'orint' is not defined
+2020-05-18 19:49:29,367 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-18 19:49:53,545 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]
+2020-05-19 10:40:37,171 INFO: Microblog startup [in D:\code\microblog\app\__init__.py:82]

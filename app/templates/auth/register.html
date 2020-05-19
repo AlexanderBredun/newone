@@ -1,0 +1,30 @@
+{% if user.theme2 == 'default' %}
+
+{% extends 'base.html' %}
+
+{% elif user.theme2 == 'black' %}
+
+{% extends 'baseblack.html' %}
+
+{% elif user.theme2 == 'red' %}
+
+{% extends 'basered.html' %}
+
+{% else %}
+
+{% extends 'base.html' %}
+
+{% endif %}
+
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block app_content %}
+    <h1>{{_('Register u cunt or i will find u and gonna smack u rigth into ur damn pig face')}}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    
+{% endblock %}
